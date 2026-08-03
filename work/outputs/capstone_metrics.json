@@ -1,0 +1,43 @@
+{
+  "scope": "bundled anonymized starter slice; current-window decline proxy",
+  "random_state": 42,
+  "split": {
+    "test_rows": 7115,
+    "test_clients": 8,
+    "train_clients": 24
+  },
+  "metrics": [
+    {
+      "method": "logistic_regression",
+      "roc_auc": 0.5982,
+      "average_precision": 0.6003,
+      "precision_at_20": 0.85,
+      "precision_at_50": 0.8,
+      "base_rate": 0.5165
+    },
+    {
+      "method": "random_forest",
+      "roc_auc": 0.6181,
+      "average_precision": 0.6094,
+      "precision_at_20": 0.8,
+      "precision_at_50": 0.68,
+      "base_rate": 0.5165
+    },
+    {
+      "method": "transparent_baseline",
+      "roc_auc": 0.5061,
+      "average_precision": 0.5198,
+      "precision_at_20": 0.65,
+      "precision_at_50": 0.52,
+      "base_rate": 0.5165
+    }
+  ],
+  "excluded_features": [
+    "content_id",
+    "client_id",
+    "trend_direction",
+    "trend_pct",
+    "provider_used",
+    "model_used"
+  ]
+}
